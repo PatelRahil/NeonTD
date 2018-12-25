@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A9F4A0B21BF379400731D7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A0A21BF379400731D7E /* AppDelegate.swift */; };
+		5A9F4A0D21BF379400731D7E /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F4A0C21BF379400731D7E /* GameScene.sks */; };
+		5A9F4A0F21BF379400731D7E /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F4A0E21BF379400731D7E /* Actions.sks */; };
+		5A9F4A1121BF379400731D7E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A1021BF379400731D7E /* GameScene.swift */; };
+		5A9F4A1321BF379400731D7E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A1221BF379400731D7E /* GameViewController.swift */; };
+		5A9F4A1621BF379400731D7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F4A1421BF379400731D7E /* Main.storyboard */; };
+		5A9F4A1821BF379700731D7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F4A1721BF379700731D7E /* Assets.xcassets */; };
+		5A9F4A1B21BF379700731D7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9F4A1921BF379700731D7E /* LaunchScreen.storyboard */; };
+		5A9F4A2621BF379700731D7E /* NeonTDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A2521BF379700731D7E /* NeonTDTests.swift */; };
+		5A9F4A3121BF379700731D7E /* NeonTDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A3021BF379700731D7E /* NeonTDUITests.swift */; };
+		5A9F4A3F21BF393100731D7E /* Tower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A3E21BF393100731D7E /* Tower.swift */; };
+		5A9F4A4121BF3B8500731D7E /* Sprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4021BF3B8500731D7E /* Sprite.swift */; };
+		5A9F4A4321BF3DE400731D7E /* TowerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4221BF3DE400731D7E /* TowerType.swift */; };
+		5A9F4A4521BF3F2700731D7E /* CircleTower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4421BF3F2700731D7E /* CircleTower.swift */; };
+		5A9F4A4721BF84B100731D7E /* UpgradePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4621BF84B100731D7E /* UpgradePopup.swift */; };
+		5A9F4A4921BFC19500731D7E /* GridSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4821BFC19500731D7E /* GridSpace.swift */; };
+		5A9F4A4B21BFC2CD00731D7E /* PlaceableSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4A21BFC2CD00731D7E /* PlaceableSpace.swift */; };
+		5A9F4A4D21BFC46300731D7E /* UnplaceableSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4C21BFC46300731D7E /* UnplaceableSpace.swift */; };
+		5A9F4A4F21BFC4A100731D7E /* PathSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A4E21BFC4A100731D7E /* PathSpace.swift */; };
+		5A9F4A5121BFC4D300731D7E /* ObstacleSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5021BFC4D300731D7E /* ObstacleSpace.swift */; };
+		5A9F4A5321BFC52800731D7E /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5221BFC52800731D7E /* Grid.swift */; };
+		5A9F4A5521C30F6000731D7E /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5421C30F6000731D7E /* Path.swift */; };
+		5A9F4A5721C3221400731D7E /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5621C3221400731D7E /* Enemy.swift */; };
+		5A9F4A5921C3222700731D7E /* EnemyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5821C3222700731D7E /* EnemyType.swift */; };
+		5A9F4A5B21CF769E00731D7E /* EnemyWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5A21CF769E00731D7E /* EnemyWave.swift */; };
+		5A9F4A5D21CF7D5600731D7E /* TempEnemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5C21CF7D5600731D7E /* TempEnemy.swift */; };
+		5A9F4A5F21D04A4E00731D7E /* Projectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A5E21D04A4E00731D7E /* Projectile.swift */; };
+		5A9F4A6121D04B2700731D7E /* BasicProjectile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F4A6021D04B2700731D7E /* BasicProjectile.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A9F4A2221BF379700731D7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A9F49FF21BF379400731D7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A9F4A0621BF379400731D7E;
+			remoteInfo = NeonTD;
+		};
+		5A9F4A2D21BF379700731D7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A9F49FF21BF379400731D7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A9F4A0621BF379400731D7E;
+			remoteInfo = NeonTD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A9F4A0721BF379400731D7E /* NeonTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeonTD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9F4A0A21BF379400731D7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5A9F4A0C21BF379400731D7E /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		5A9F4A0E21BF379400731D7E /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		5A9F4A1021BF379400731D7E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		5A9F4A1221BF379400731D7E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		5A9F4A1521BF379400731D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5A9F4A1721BF379700731D7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A9F4A1A21BF379700731D7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5A9F4A1C21BF379700731D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9F4A2121BF379700731D7E /* NeonTDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeonTDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9F4A2521BF379700731D7E /* NeonTDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonTDTests.swift; sourceTree = "<group>"; };
+		5A9F4A2721BF379700731D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9F4A2C21BF379700731D7E /* NeonTDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeonTDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A9F4A3021BF379700731D7E /* NeonTDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeonTDUITests.swift; sourceTree = "<group>"; };
+		5A9F4A3221BF379700731D7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9F4A3E21BF393100731D7E /* Tower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower.swift; sourceTree = "<group>"; };
+		5A9F4A4021BF3B8500731D7E /* Sprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprite.swift; sourceTree = "<group>"; };
+		5A9F4A4221BF3DE400731D7E /* TowerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TowerType.swift; sourceTree = "<group>"; };
+		5A9F4A4421BF3F2700731D7E /* CircleTower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTower.swift; sourceTree = "<group>"; };
+		5A9F4A4621BF84B100731D7E /* UpgradePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpgradePopup.swift; sourceTree = "<group>"; };
+		5A9F4A4821BFC19500731D7E /* GridSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSpace.swift; sourceTree = "<group>"; };
+		5A9F4A4A21BFC2CD00731D7E /* PlaceableSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceableSpace.swift; sourceTree = "<group>"; };
+		5A9F4A4C21BFC46300731D7E /* UnplaceableSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnplaceableSpace.swift; sourceTree = "<group>"; };
+		5A9F4A4E21BFC4A100731D7E /* PathSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathSpace.swift; sourceTree = "<group>"; };
+		5A9F4A5021BFC4D300731D7E /* ObstacleSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObstacleSpace.swift; sourceTree = "<group>"; };
+		5A9F4A5221BFC52800731D7E /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		5A9F4A5421C30F6000731D7E /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		5A9F4A5621C3221400731D7E /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		5A9F4A5821C3222700731D7E /* EnemyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyType.swift; sourceTree = "<group>"; };
+		5A9F4A5A21CF769E00731D7E /* EnemyWave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyWave.swift; sourceTree = "<group>"; };
+		5A9F4A5C21CF7D5600731D7E /* TempEnemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempEnemy.swift; sourceTree = "<group>"; };
+		5A9F4A5E21D04A4E00731D7E /* Projectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projectile.swift; sourceTree = "<group>"; };
+		5A9F4A6021D04B2700731D7E /* BasicProjectile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicProjectile.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A9F4A0421BF379400731D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A1E21BF379700731D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A2921BF379700731D7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A9F49FE21BF379400731D7E = {
+			isa = PBXGroup;
+			children = (
+				5A9F4A0921BF379400731D7E /* NeonTD */,
+				5A9F4A2421BF379700731D7E /* NeonTDTests */,
+				5A9F4A2F21BF379700731D7E /* NeonTDUITests */,
+				5A9F4A0821BF379400731D7E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A9F4A0821BF379400731D7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F4A0721BF379400731D7E /* NeonTD.app */,
+				5A9F4A2121BF379700731D7E /* NeonTDTests.xctest */,
+				5A9F4A2C21BF379700731D7E /* NeonTDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A9F4A0921BF379400731D7E /* NeonTD */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F4A0A21BF379400731D7E /* AppDelegate.swift */,
+				5A9F4A0C21BF379400731D7E /* GameScene.sks */,
+				5A9F4A0E21BF379400731D7E /* Actions.sks */,
+				5A9F4A1021BF379400731D7E /* GameScene.swift */,
+				5A9F4A5C21CF7D5600731D7E /* TempEnemy.swift */,
+				5A9F4A5421C30F6000731D7E /* Path.swift */,
+				5A9F4A4621BF84B100731D7E /* UpgradePopup.swift */,
+				5A9F4A3E21BF393100731D7E /* Tower.swift */,
+				5A9F4A4821BFC19500731D7E /* GridSpace.swift */,
+				5A9F4A4A21BFC2CD00731D7E /* PlaceableSpace.swift */,
+				5A9F4A4C21BFC46300731D7E /* UnplaceableSpace.swift */,
+				5A9F4A4E21BFC4A100731D7E /* PathSpace.swift */,
+				5A9F4A5021BFC4D300731D7E /* ObstacleSpace.swift */,
+				5A9F4A5221BFC52800731D7E /* Grid.swift */,
+				5A9F4A4421BF3F2700731D7E /* CircleTower.swift */,
+				5A9F4A5E21D04A4E00731D7E /* Projectile.swift */,
+				5A9F4A6021D04B2700731D7E /* BasicProjectile.swift */,
+				5A9F4A4221BF3DE400731D7E /* TowerType.swift */,
+				5A9F4A5621C3221400731D7E /* Enemy.swift */,
+				5A9F4A5A21CF769E00731D7E /* EnemyWave.swift */,
+				5A9F4A5821C3222700731D7E /* EnemyType.swift */,
+				5A9F4A4021BF3B8500731D7E /* Sprite.swift */,
+				5A9F4A1221BF379400731D7E /* GameViewController.swift */,
+				5A9F4A1421BF379400731D7E /* Main.storyboard */,
+				5A9F4A1721BF379700731D7E /* Assets.xcassets */,
+				5A9F4A1921BF379700731D7E /* LaunchScreen.storyboard */,
+				5A9F4A1C21BF379700731D7E /* Info.plist */,
+			);
+			path = NeonTD;
+			sourceTree = "<group>";
+		};
+		5A9F4A2421BF379700731D7E /* NeonTDTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F4A2521BF379700731D7E /* NeonTDTests.swift */,
+				5A9F4A2721BF379700731D7E /* Info.plist */,
+			);
+			path = NeonTDTests;
+			sourceTree = "<group>";
+		};
+		5A9F4A2F21BF379700731D7E /* NeonTDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F4A3021BF379700731D7E /* NeonTDUITests.swift */,
+				5A9F4A3221BF379700731D7E /* Info.plist */,
+			);
+			path = NeonTDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A9F4A0621BF379400731D7E /* NeonTD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A9F4A3521BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTD" */;
+			buildPhases = (
+				5A9F4A0321BF379400731D7E /* Sources */,
+				5A9F4A0421BF379400731D7E /* Frameworks */,
+				5A9F4A0521BF379400731D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeonTD;
+			productName = NeonTD;
+			productReference = 5A9F4A0721BF379400731D7E /* NeonTD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A9F4A2021BF379700731D7E /* NeonTDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A9F4A3821BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTDTests" */;
+			buildPhases = (
+				5A9F4A1D21BF379700731D7E /* Sources */,
+				5A9F4A1E21BF379700731D7E /* Frameworks */,
+				5A9F4A1F21BF379700731D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A9F4A2321BF379700731D7E /* PBXTargetDependency */,
+			);
+			name = NeonTDTests;
+			productName = NeonTDTests;
+			productReference = 5A9F4A2121BF379700731D7E /* NeonTDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A9F4A2B21BF379700731D7E /* NeonTDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A9F4A3B21BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTDUITests" */;
+			buildPhases = (
+				5A9F4A2821BF379700731D7E /* Sources */,
+				5A9F4A2921BF379700731D7E /* Frameworks */,
+				5A9F4A2A21BF379700731D7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A9F4A2E21BF379700731D7E /* PBXTargetDependency */,
+			);
+			name = NeonTDUITests;
+			productName = NeonTDUITests;
+			productReference = 5A9F4A2C21BF379700731D7E /* NeonTDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A9F49FF21BF379400731D7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = RahilPatel;
+				TargetAttributes = {
+					5A9F4A0621BF379400731D7E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5A9F4A2021BF379700731D7E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5A9F4A0621BF379400731D7E;
+					};
+					5A9F4A2B21BF379700731D7E = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5A9F4A0621BF379400731D7E;
+					};
+				};
+			};
+			buildConfigurationList = 5A9F4A0221BF379400731D7E /* Build configuration list for PBXProject "NeonTD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A9F49FE21BF379400731D7E;
+			productRefGroup = 5A9F4A0821BF379400731D7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A9F4A0621BF379400731D7E /* NeonTD */,
+				5A9F4A2021BF379700731D7E /* NeonTDTests */,
+				5A9F4A2B21BF379700731D7E /* NeonTDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A9F4A0521BF379400731D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9F4A1621BF379400731D7E /* Main.storyboard in Resources */,
+				5A9F4A0D21BF379400731D7E /* GameScene.sks in Resources */,
+				5A9F4A1821BF379700731D7E /* Assets.xcassets in Resources */,
+				5A9F4A1B21BF379700731D7E /* LaunchScreen.storyboard in Resources */,
+				5A9F4A0F21BF379400731D7E /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A1F21BF379700731D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A2A21BF379700731D7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A9F4A0321BF379400731D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9F4A5F21D04A4E00731D7E /* Projectile.swift in Sources */,
+				5A9F4A6121D04B2700731D7E /* BasicProjectile.swift in Sources */,
+				5A9F4A4921BFC19500731D7E /* GridSpace.swift in Sources */,
+				5A9F4A5B21CF769E00731D7E /* EnemyWave.swift in Sources */,
+				5A9F4A5121BFC4D300731D7E /* ObstacleSpace.swift in Sources */,
+				5A9F4A4521BF3F2700731D7E /* CircleTower.swift in Sources */,
+				5A9F4A4B21BFC2CD00731D7E /* PlaceableSpace.swift in Sources */,
+				5A9F4A5721C3221400731D7E /* Enemy.swift in Sources */,
+				5A9F4A4721BF84B100731D7E /* UpgradePopup.swift in Sources */,
+				5A9F4A5321BFC52800731D7E /* Grid.swift in Sources */,
+				5A9F4A5D21CF7D5600731D7E /* TempEnemy.swift in Sources */,
+				5A9F4A4121BF3B8500731D7E /* Sprite.swift in Sources */,
+				5A9F4A4321BF3DE400731D7E /* TowerType.swift in Sources */,
+				5A9F4A1121BF379400731D7E /* GameScene.swift in Sources */,
+				5A9F4A4F21BFC4A100731D7E /* PathSpace.swift in Sources */,
+				5A9F4A1321BF379400731D7E /* GameViewController.swift in Sources */,
+				5A9F4A5921C3222700731D7E /* EnemyType.swift in Sources */,
+				5A9F4A0B21BF379400731D7E /* AppDelegate.swift in Sources */,
+				5A9F4A3F21BF393100731D7E /* Tower.swift in Sources */,
+				5A9F4A5521C30F6000731D7E /* Path.swift in Sources */,
+				5A9F4A4D21BFC46300731D7E /* UnplaceableSpace.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A1D21BF379700731D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9F4A2621BF379700731D7E /* NeonTDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A9F4A2821BF379700731D7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9F4A3121BF379700731D7E /* NeonTDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A9F4A2321BF379700731D7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A9F4A0621BF379400731D7E /* NeonTD */;
+			targetProxy = 5A9F4A2221BF379700731D7E /* PBXContainerItemProxy */;
+		};
+		5A9F4A2E21BF379700731D7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A9F4A0621BF379400731D7E /* NeonTD */;
+			targetProxy = 5A9F4A2D21BF379700731D7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5A9F4A1421BF379400731D7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A9F4A1521BF379400731D7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5A9F4A1921BF379700731D7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5A9F4A1A21BF379700731D7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5A9F4A3321BF379700731D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5A9F4A3421BF379700731D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5A9F4A3621BF379700731D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9E6SLMQ79;
+				INFOPLIST_FILE = NeonTD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.Rahil.NeonTD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A9F4A3721BF379700731D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H9E6SLMQ79;
+				INFOPLIST_FILE = NeonTD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.Rahil.NeonTD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5A9F4A3921BF379700731D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeonTDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.DangerPros.NeonTDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeonTD.app/NeonTD";
+			};
+			name = Debug;
+		};
+		5A9F4A3A21BF379700731D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeonTDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.DangerPros.NeonTDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeonTD.app/NeonTD";
+			};
+			name = Release;
+		};
+		5A9F4A3C21BF379700731D7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeonTDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.DangerPros.NeonTDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeonTD;
+			};
+			name = Debug;
+		};
+		5A9F4A3D21BF379700731D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NeonTDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = self.edu.DangerPros.NeonTDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeonTD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A9F4A0221BF379400731D7E /* Build configuration list for PBXProject "NeonTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9F4A3321BF379700731D7E /* Debug */,
+				5A9F4A3421BF379700731D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A9F4A3521BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9F4A3621BF379700731D7E /* Debug */,
+				5A9F4A3721BF379700731D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A9F4A3821BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9F4A3921BF379700731D7E /* Debug */,
+				5A9F4A3A21BF379700731D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A9F4A3B21BF379700731D7E /* Build configuration list for PBXNativeTarget "NeonTDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A9F4A3C21BF379700731D7E /* Debug */,
+				5A9F4A3D21BF379700731D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5A9F49FF21BF379400731D7E /* Project object */;
+}
