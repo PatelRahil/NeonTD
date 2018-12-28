@@ -33,6 +33,12 @@ struct TowerType {
     static let towers = [circle, triangle, square]
 }
 
+
+/// Enum for Tower types.
+///
+/// - circle: A circle tower.
+/// - triangle: A triangle tower.
+/// - sqaure: A square tower.
 enum tType: CaseIterable {
     case circle
     case triangle

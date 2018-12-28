@@ -8,6 +8,7 @@
 
 import SpriteKit
 
+
 class Enemy: Sprite {
     // Positions where the enemy will change directions
     // Includes starting and ending position
@@ -17,6 +18,15 @@ class Enemy: Sprite {
     
     var isFirst = false
     
+    
+    /// Initializer for an Enemy with an image.
+    ///
+    /// - Parameters:
+    ///   - imageName: Name of the Enemy's image.
+    ///   - vertexPos: positions of the verticies of the map's path.
+    ///   - speed: The Enemy's speed.
+    ///   - type: The Enemy's type.
+    ///   - size: The Enemy's size.
     init(imageName: String, vertexPos: [CGPoint], speed: Double, type: eType, size: CGSize) {
         self.vertexPos = vertexPos
         self.speed = speed
@@ -31,7 +41,14 @@ class Enemy: Sprite {
         }
     }
     
-    // For testing
+    
+    /// Initializer for a basic square Enemy (for testing).
+    ///
+    /// - Parameters:
+    ///   - vertexPos: positions of the verticies of the map's path.
+    ///   - speed: The Enemy's speed.
+    ///   - type: The Enemy's type.
+    ///   - size: The Enemy's size.
     init(vertexPos: [CGPoint], speed: Double, type: eType, size: CGSize) {
         self.vertexPos = vertexPos
         self.speed = speed
@@ -46,10 +63,21 @@ class Enemy: Sprite {
         }
     }
     
+    
+    /// Update's the enemy's knowledge of the map's path's verticies.
+    ///
+    /// - Parameter positions: The verticies' positions.
     func setVertexPos(positions: [CGPoint]) {
         vertexPos = positions
+        moveAction()
     }
     
+    
+    /// The enemy's action for moving from start to end on the map.
+    ///
+    /// - Assumes the enemy is at the starting point of the map.
+    ///
+    /// - Returns: Returns the action for the movement.
     func moveAction() -> SKAction {
         let velocity = 10 * speed
         var actions = [SKAction]()
@@ -71,16 +99,32 @@ class Enemy: Sprite {
         return sequence
     }
     
+    
+    /// Runs the given action on the Enemy Sprite.
+    ///
+    /// - Parameter action: The action to run.
     func runAction(action: SKAction) {
         sprite.run(action)
     }
     
+    
+    /// Kills the Enemy.
+    ///
+    /// - Removes the Enemy Sprite's actions.
+    /// - Removes the Enemy Sprite from its parent node.
     func kill() {
         sprite.removeAllActions()
         sprite.removeFromParent()
     }
     
-    // Also returns false if this instance is at the same position as the other
+    // Also returns false if this instance is at the same position as the other.
+    
+    /// Whether or not this enemy is in front of the given enemy on the map's path.
+    ///
+    /// - Parameters:
+    ///   - other: The other enemy who's position is being compared.
+    ///   - isReverse: Whether or not the map is reversed.
+    /// - Returns: Returns whether or not this enemy is in front of other on the path.
     func isInFrontOf(other: Enemy, isReverse: Bool) -> Bool {
         let pos1 = self.sprite.position
         let pos2 = other.sprite.position

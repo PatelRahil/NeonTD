@@ -27,6 +27,12 @@ class GridSpace {
         }
     }
     
+    
+    /// Initializer for a GridSpace.
+    ///
+    /// - Parameters:
+    ///   - placeable: Whether or not towers can be placed on this tile.
+    ///   - runnable: Whether or not enemies can run on this tower.
     init(placeable: Bool, runnable: Bool) {
         self.placeable = placeable
         self.runnable = runnable

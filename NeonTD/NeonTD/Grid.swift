@@ -37,6 +37,12 @@ class Grid: CustomStringConvertible {
         return str
     }
     
+    
+    /// Initializer for a map's grid.
+    ///
+    /// - Parameters:
+    ///   - grid: A 2D array of Gridspace objects.
+    ///   - path: The Grid's Path.
     init(grid: [[GridSpace]], path: Path) {
         self.path = path
         self.grid = grid
@@ -52,8 +58,8 @@ class Grid: CustomStringConvertible {
             for space in row {
                 // Access space to get more detailed info about a grid space
                 let node = SKSpriteNode()
-                let pos = calcPos(row: rowNum, col: colNum)
-                node.position = pos
+                let position = pos(row: rowNum, col: colNum)
+                node.position = position
                 node.size = nodeSize
                 node.alpha = 0.1
                 node.color = space.placeable ? UIColor.green : UIColor.red
@@ -67,16 +73,10 @@ class Grid: CustomStringConvertible {
         }
     }
     
-    private func calcPos(row: Int, col: Int) -> CGPoint {
-        // Offsets are because of anchor points at (0.5, 0.5)
-        let xOffset = nodeSize.width / CGFloat(2)
-        let yOffset = nodeSize.height / CGFloat(2)
-        
-        let x = CGFloat(col) * nodeSize.width + xOffset
-        let y = CGFloat(row) * nodeSize.height + yOffset
-        return CGPoint(x: x, y: y)
-    }
     
+    /// Returns the coordinates that enemies spawn at.
+    ///
+    /// - Returns: The coordinates that enemies spawn at.
     func startPos() -> CGPoint {
         let start = path.startPos
         let reverse = path.isReverse
@@ -88,7 +88,12 @@ class Grid: CustomStringConvertible {
             let row = reverse ? grid.count - 1 : 0
             return pos(row: row, col: start)
         }
+        
     }
+    
+    /// Returns the coordinates that enemies end at.
+    ///
+    /// - Returns: The coordinates that enemies end at.
     func endPos() -> CGPoint {
         let end = path.endPos
         let reverse = path.isReverse
@@ -102,6 +107,10 @@ class Grid: CustomStringConvertible {
         }
     }
     
+    
+    /// Shows all of the Grid's tiles.
+    ///
+    /// Green tiles are placeable and red are not.
     func showTiles() {
         for row in nodes {
             for node in row {
@@ -110,6 +119,8 @@ class Grid: CustomStringConvertible {
         }
     }
     
+    
+    /// Hides all of the Grid's tiles.
     func hideTiles() {
         for row in nodes {
             for node in row {
@@ -118,12 +129,29 @@ class Grid: CustomStringConvertible {
         }
     }
     
+    
+    /// Returns the row and column of the GridSpace that contains the given point.
+    ///
+    /// - Parameter pos: The position of the point.
+    /// - Returns: A tuple representing the row and column.
+    ///
+    /// .1: Row
+    ///
+    /// .2: Column
     func rowAndCol(at pos: CGPoint) -> (Int, Int) {
         let row: Int = Int(floor(pos.y / nodeSize.height))
         let col: Int = Int(floor(pos.x / nodeSize.width))
         return (row, col)
     }
     
+    /// Determines the coordinates of a GridSpace.
+    ///
+    /// Coordinate is at the center of the given GridSpace.
+    ///
+    /// - Parameters:
+    ///   - row: The GridSpace's row index.
+    ///   - col: The GridSpace's column index.
+    /// - Returns: Returns the coordinates of the GridSpace.
     func pos(row: Int, col: Int) -> CGPoint {
         // Offset to give point in the middle of given position
         let xOffset = nodeSize.width / CGFloat(2)
@@ -134,6 +162,11 @@ class Grid: CustomStringConvertible {
         return CGPoint(x: xPos, y: yPos)
     }
     
+    
+    /// Returns if a frame is within the bounds of placeable tiles on the grid.
+    ///
+    /// - Parameter rect: The frame.
+    /// - Returns: Whether or not the rect is within the bounds of placeable tiles.
     func validFrame(rect: CGRect) -> Bool {
         var valid = true
         
@@ -165,6 +198,10 @@ class Grid: CustomStringConvertible {
         return valid
     }
     
+    
+    /// Turn the GridSpace's that contain the given frame into ObstacleSpace's.
+    ///
+    /// - Parameter rect: The frame to invalidate GridSpace's with.
     func invalidateGrid(in rect: CGRect) {
         let minX = rect.minX
         let maxX = rect.maxX
@@ -191,6 +228,10 @@ class Grid: CustomStringConvertible {
         }
     }
     
+    
+    /// Returns an array of points at which the Grid's path changes directions.
+    ///
+    /// - Returns: An array of points at the Grid's Path's verticies
     func verticies() -> [CGPoint] {
         let offset: CGFloat = 10
         
@@ -234,9 +275,14 @@ class Grid: CustomStringConvertible {
         let endPosY = path.startType == .row ? verticies.last!.y : gridSize.height + offset
         let endPosX = path.startType == .row ? gridSize.width + offset : verticies.last!.x
         verticies.append(CGPoint(x: endPosX, y: endPosY))
+        removeTiles()
         return verticies
     }
-    // Soley for testing
+    
+    
+    /// Removes all the tiles
+    ///
+    /// For testing
     func removeTiles() {
         for row in nodes {
             for node in row {

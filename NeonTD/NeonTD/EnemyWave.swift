@@ -10,10 +10,17 @@ import SpriteKit
 
 class EnemyWave {
     var count: Int
-    var separation: Double
+    var separation: TimeInterval
     var type: eType
     
-    init(count: Int, separation: Double, type: eType) {
+    
+    /// Initializer for an EnemyWave.
+    ///
+    /// - Parameters:
+    ///   - count: The number of enemies in this wave.
+    ///   - separation: The timing between each enemy spawning.
+    ///   - type: The enemy type
+    init(count: Int, separation: TimeInterval, type: eType) {
         self.count = count
         self.separation = separation
         self.type = type

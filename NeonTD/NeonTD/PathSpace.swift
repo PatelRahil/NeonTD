@@ -9,6 +9,9 @@
 import SpriteKit
 
 class PathSpace: UnplaceableSpace {
+    
+    
+    /// Initializer for a PathSpace.
     init() {
         super.init(runnable: true)
     }

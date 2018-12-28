@@ -9,6 +9,9 @@
 import SpriteKit
 
 class PlaceableSpace: GridSpace {
+    
+    
+    /// Initializer for a PlaceableSpace.
     init() {
         super.init(placeable: true, runnable: false)
     }

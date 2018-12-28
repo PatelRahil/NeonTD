@@ -20,6 +20,10 @@ class CircleTower: Tower, TowerProtocol {
     
     var fireTimer = Timer()
     
+    
+    /// Initializer for a Circle Tower
+    ///
+    /// - Parameter pos: Position of the Circle Tower
     init(pos: CGPoint) {
         super.init(type: TowerType.circle["type"] as! tType,
                    size: size,
@@ -32,11 +36,17 @@ class CircleTower: Tower, TowerProtocol {
                    fireRate: fRate)
     }
     
-    override func upgrade() {        
+    
+    /// Upgrades the Circle Tower
+    override func upgrade() {
         super.upgrade()
     }
     
-    func shoot(isReverse: Bool) {
+    
+    /// Enables the Circle Tower to shoot
+    ///
+    /// - Parameter isReverse: Whether or not the map is reversed
+    func enableShooting(isReverse: Bool) {
         let timeInterval = 1 / fRate
         fireTimer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true) { (t) in
             // Aims the tower
@@ -52,10 +62,16 @@ class CircleTower: Tower, TowerProtocol {
         fireTimer.fire()
     }
     
-    func stopShooting() {
+    
+    /// Disables the Circle Tower from shooting
+    func disableShooting() {
         fireTimer.invalidate()
     }
     
+    
+    /// Shoots a projectile at a given position
+    ///
+    /// - Parameter pos: Where to shoot the projectile
     private func shootProjectile(to pos: CGPoint) {
         let projectile = BasicProjectile(pos: sprite.position)
         let dx = abs(Double(sprite.position.x - pos.x))

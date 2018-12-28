@@ -13,6 +13,14 @@ class UpgradePopup {
     let screenWidth = UIScreen.main.bounds.width
     let screenHeight: CGFloat = UIScreen.main.bounds.height
     let offset: CGFloat = 20
+    
+    
+    /// Initializer for an Upgrade Popup menu for Tower's.
+    ///
+    /// - Parameters:
+    ///   - tower: The Tower who's upgrade popup this is.
+    ///   - height: The popup's height
+    ///   - width: The popup's width
     init(tower: Tower, height: CGFloat, width: CGFloat) {
         popup.zPosition = 1
         popup.anchorPoint = CGPoint.zero
@@ -54,6 +62,11 @@ class UpgradePopup {
     }
 
     
+    /// Adjusts an SKLabelNode's font size to fit it within a frame
+    ///
+    /// - Parameters:
+    ///   - labelNode: The label who's font size is being adjusted
+    ///   - rect: The frame that will determine the label's font size
     private func adjustLabelFontSizeToFitRect(labelNode:SKLabelNode, rect:CGRect) {
         let offset: CGFloat = 20
         // Determine the font scaling factor that should let the label text fit in the given rectangle.

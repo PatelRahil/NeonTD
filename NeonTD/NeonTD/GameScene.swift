@@ -309,7 +309,7 @@ class GameScene: SKScene {
             towers.append(tower)
             tower.sprite.name = "Temp_Tower"
             tower.sprite.zPosition = 0.5
-            tower.shoot(isReverse: grid!.path.isReverse)
+            tower.enableShooting(isReverse: grid!.path.isReverse)
             addChild(tower.sprite)
             addRangeCircle(on: tower)
             grid!.showTiles()
@@ -320,9 +320,7 @@ class GameScene: SKScene {
         default:
             print("Something went wrong")
         }
-        
-        
-        
+                
         isPlacingTower = true
     }
     

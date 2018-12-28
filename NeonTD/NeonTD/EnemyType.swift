@@ -12,6 +12,10 @@ struct EnemyType {
     
 }
 
+
+/// Enum for Enemy types.
+///
+/// - temp: Temp Enemy (For testing).
 enum eType: CaseIterable {
     // For testing
     case temp

@@ -9,6 +9,9 @@
 import SpriteKit
 
 class ObstacleSpace: UnplaceableSpace {
+    
+    
+    /// Initializer for an ObstacleSpace.
     init() {
         super.init(runnable: false)
     }
